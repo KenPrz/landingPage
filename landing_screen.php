@@ -56,7 +56,7 @@
                                 Read Article
                             </a>
                             <div class="collapse" id="id<?php echo $row['id']; ?>">
-                                <div class="card card-body mt-2 overflow-auto">
+                                <div class="card card-body mt-2">
                                     <?php echo $row['content']."<br/>"; ?>                                
                                 </div>
                                     <div class="d-flex justify-content-end mr-2">
@@ -80,18 +80,6 @@
                             </div>
                             <div>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ipsa qui eveniet atque voluptate nobis laboriosam ipsam velit placeat mollitia laborum, cupiditate eaque explicabo cum exercitationem quasi temporibus optio dolor dolorum fuga vitae quisquam similique! Rem qui eius dolorum neque, maiores sequi officiis facilis veritatis. Necessitatibus reiciendis officiis facilis adipisci.</p>
-                            </div>
-                        </div>
-                    
-
-                        <div>
-                            <div class="names">
-                                <h5>Top Contributors</h5>
-                                <ul>
-                                    <li>name1</li>
-                                    <li>name2</li>
-                                    <li>name3</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
