@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-ul{
+.headerPlace ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #4c6fbf;
+  padding-left: 0px;
+}
+
+.headerPlace li{
+  float: right;
   transition: 0.7s;
 }
 
-li{
-  float: right;
-}
-
-li a {
+.headerPlace li a {
   display: block;
   color: white;
   text-align: center;
@@ -21,7 +22,7 @@ li a {
   
 }
 
-li a:hover {
+.headerPlace li a:hover {
   background-color: #355cb6;
   color: #ffffff;
 }
@@ -32,4 +33,8 @@ li a:hover {
 }
 #logout:hover{
   background-color: #b64242 ;
+}
+.fixedFloat{
+  position: fixed;
+  margin-right: 40px;
 }

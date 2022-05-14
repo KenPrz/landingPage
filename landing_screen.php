@@ -26,12 +26,15 @@
 <body>
 
 <!--Header-->
-    <div class="headerPlace">
-        <ul>
-            <li><a id="logout" href="logout.php">LOGOUT</a></li>
-            <li><a href="article.php">Create</a></li>
-            <li><a href="profile.php">Profile</a></li> 
-        </ul>
+    <div class="sticky-top">
+        <div class="headerPlace">
+            <ul>
+                <li><a id="logout" href="logout.php">LOGOUT</a></li>
+                <li><a href="article.php">Create</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li style="float:left;font-family: 'Montserrat', sans-serif;"><a href="./landing_screen.php">ARTICLES</a></li>
+            </ul>
+        </div>
     </div>
 <!--END OF Header-->
     <?php
@@ -44,7 +47,7 @@
             <div class="col-8">
 
                 <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) :?>
-                    <div class="card mb-3">
+                    <div class="card mb-3 mt-3">
                         <img class="card-img-top" src="https://via.placeholder.com/893x180" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $row['title']."<br/>"; ?></h5>
@@ -53,19 +56,45 @@
                                 Read Article
                             </a>
                             <div class="collapse" id="id<?php echo $row['id']; ?>">
-                                <div class="card card-body mt-2">
+                                <div class="card card-body mt-2 overflow-auto">
                                     <?php echo $row['content']."<br/>"; ?>                                
                                 </div>
+                                    <div class="d-flex justify-content-end mr-2">
+                                        <a class="btn btn-secondary btn-sm mt-2" data-bs-toggle="collapse" href=#id<?php echo $row['id'];?> role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            Close Article
+                                        </a>
+                                    </div>
                             </div>
+                            
                             <p class="card-text mt-2"><small class="text-muted">Date Posted : <?php echo $row['date']."<br/>"; ?> </small></p>
                         </div>
                     </div>
                 <?php endwhile ?>
-
             </div>
-        </div>
-            <div class="col-4">
             
+            <div class="col-4 mt-3">
+                    <div class="fixedFloat">
+                        <div style="padding:20px;" class="border rounded mb-3">
+                            <div class="border-bottom mt-1 mb-2">
+                                <h4>This is an article screen</h4>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ipsa qui eveniet atque voluptate nobis laboriosam ipsam velit placeat mollitia laborum, cupiditate eaque explicabo cum exercitationem quasi temporibus optio dolor dolorum fuga vitae quisquam similique! Rem qui eius dolorum neque, maiores sequi officiis facilis veritatis. Necessitatibus reiciendis officiis facilis adipisci.</p>
+                            </div>
+                        </div>
+                    
+
+                        <div>
+                            <div class="names">
+                                <h5>Top Contributors</h5>
+                                <ul>
+                                    <li>name1</li>
+                                    <li>name2</li>
+                                    <li>name3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
 </body>
