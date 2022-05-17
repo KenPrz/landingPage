@@ -48,7 +48,7 @@
 
                 <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) :?>
                     <div class="card mb-3 mt-3">
-                        <img class="card-img-top" src="https://via.placeholder.com/893x180" alt="Card image cap">
+                        <img class="card-img-top" src="./uploads/<?php echo $row['headline_photo'] ?>" alt="IMAGE">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $row['title']."<br/>"; ?></h5>
                             <p>By:<?php echo $row['author']."<br/>"; ?></p>
