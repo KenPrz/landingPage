@@ -17,7 +17,6 @@
         $user = 'root';
         $password = '';
         $dbname = 'blogsite_database';
-
         $dsn = "mysql:host=$host;dbname=$dbname";
     ?>
 
@@ -40,7 +39,7 @@
     <?php
         $pdo = new PDO($dsn,$user,$password);
         //PDO query
-        $stmt = $pdo->query("SELECT * FROM articles");
+        $stmt = $pdo->query("SELECT * FROM `articles` order by date DESC");
     ?>
     <div class="container">
         <div class="row">
@@ -65,7 +64,6 @@
                                         </a>
                                     </div>
                             </div>
-                            
                             <p class="card-text mt-2"><small class="text-muted">Date Posted : <?php echo $row['date']."<br/>"; ?> </small></p>
                         </div>
                     </div>
